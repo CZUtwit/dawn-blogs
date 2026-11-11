@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dawn 的个人博客</title>
+<style>
+  :root{
+    --bg:#F4F1E9; --card:#FFFDF7; --ink:#0C0A07; --ink2:#4A443A; --ink3:#827A6C;
+    --line:rgba(12,10,7,.12); --red:#A8432A; --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",system-ui,sans-serif;font-size:15.5px;line-height:1.75;-webkit-font-smoothing:antialiased;padding:28px 18px 60px}
+  main{max-width:760px;margin:0 auto}
+  a{color:var(--red);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .topnav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+  .navbtn{display:inline-flex;align-items:center;min-height:36px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);font-size:13.5px;color:var(--ink2);text-decoration:none}
+  .navbtn:hover{border-color:var(--red);color:var(--ink);text-decoration:none}
+  .navbtn.on{background:var(--red);border-color:var(--red);color:#fff}
+
+  .badge{display:inline-block;background:#EFEAD9;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:12.5px;color:var(--ink2)}
+
+  header{text-align:left;padding:6px 0 4px}
+  header .mark{font-size:40px;line-height:1}
+  h1{font-size:32px;line-height:1.3;letter-spacing:-.02em;margin:14px 0 6px}
+  .sub{color:var(--ink2);margin:0 0 22px;font-size:14.5px}
+  .intro{color:var(--ink2);font-size:15.5px;margin:0 0 8px;max-width:640px}
+
+  .count{font-size:13px;color:var(--ink3);margin:22px 0 14px}
+
+  .list{display:flex;flex-direction:column;gap:12px}
+  .deal{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:0 14px 34px -30px rgba(34,28,16,.55);color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
+  .deal:hover{border-color:rgba(168,67,42,.4);transform:translateY(-1px);text-decoration:none}
+  .dname{font-size:18.5px;font-weight:700;line-height:1.5;margin:0 0 3px}
+  .dplat{font-size:13px;color:var(--ink3);margin:0 0 9px}
+  .dval{font-size:15.5px;color:var(--ink2);margin:0 0 8px}
+  .dsum{font-size:13.5px;color:var(--ink3);margin:0 0 10px;line-height:1.7}
+  .tags{display:flex;gap:7px;flex-wrap:wrap}
+  .tag{border:1px solid var(--line);background:var(--card);color:var(--ink2);border-radius:999px;padding:4px 11px;font-size:12.5px}
+
+  .about{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:0 14px 34px -30px rgba(34,28,16,.55);margin-top:12px}
+  .about p{color:var(--ink2);font-size:15.5px;margin:0 0 8px}
+  .about p:last-child{margin-bottom:0}
+
+  footer{text-align:center;color:var(--ink3);font-size:13px;margin-top:44px;padding-top:20px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<main>
+
+  <nav class="topnav">
+    <a class="navbtn on" href="#">首页</a>
+    <a class="navbtn" href="#articles">文章</a>
+    <a class="navbtn" href="#projects">开发项目</a>
+    <a class="navbtn" href="#about">关于</a>
+  </nav>
+
+  <header>
+    <div class="mark">🌅</div>
+    <h1>Dawn 的个人博客</h1>
+    <p class="sub">笔名 Dawn · 学习笔记 · 慢慢积累</p>
+    <p class="intro">这里记录学习和思考，想到什么就写下来。不写真实信息，只写想法和收获。</p>
+    <span class="badge">共 3 篇文章 · 持续更新</span>
+  </header>
+
+  <div id="articles" class="count">最新文章 · 按时间倒序</div>
+  <div class="list">
+
+    <a class="deal" href="#">
+      <div class="dname">把一个新领域拆成每天一小步</div>
+      <div class="dplat">2026-11-11 · 学习方法</div>
+      <p class="dval">学一个新东西，最难的不是内容本身，而是不知道从哪里开始。</p>
+      <p class="dsum">我的办法是把它拆成每天一个小知识点，从基础概念开始，按顺序往下走，不赶进度，学明白一个再学下一个。</p>
+      <div class="tags"><span class="tag">学习</span><span class="tag">方法</span></div>
+    </a>
+
+    <a class="deal" href="#">
+      <div class="dname">写东西之前，先看懂别人为什么写得好</div>
+      <div class="dplat">2026-11-11 · 写作</div>
+      <p class="dval">想写出有人看的内容，先别急着动笔。</p>
+      <p class="dsum">找几篇火的文章，看看它开头怎么抓人、结构怎么安排、结尾怎么收，再动手仿写。模仿不是照抄，是把别人的好结构，变成自己的表达。</p>
+      <div class="tags"><span class="tag">写作</span><span class="tag">思考</span></div>
+    </a>
+
+    <a class="deal" href="#">
+      <div class="dname">工具是拿来用的，不是拿来供着的</div>
+      <div class="dplat">2026-11-11 · 工具</div>
+      <p class="dval">装了再多工具，不用也是摆设。</p>
+      <p class="dsum">选一个顺手的，先跑起来，遇到问题再换。工具的价值在于帮你把事做完，不在于它本身有多厉害。</p>
+      <div class="tags"><span class="tag">工具</span><span class="tag">效率</span></div>
+    </a>
+
+  </div>
+
+  <div id="projects" class="count">开发项目 · 代码与小工具</div>
+  <div class="list">
+
+    <a class="deal" href="#">
+      <div class="dname">波士顿房价 ElasticNet 回归</div>
+      <div class="dplat">2026-11 · 机器学习作业</div>
+      <p class="dval">用 ElasticNet 回归分析波士顿房价数据，做了一组正则化系数对照。</p>
+      <p class="dsum">基线 R² 0.6534，alpha 取 0.001 时达到 0.7108。Notebook 全程 11 个单元、零报错，在云端 Jupyter 上跑通验证。</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">pandas</span></div>
+    </a>
+
+    <a class="deal" href="#">
+      <div class="dname">微信小程序「投单汇管」</div>
+      <div class="dplat">2026-10 · 小程序开发</div>
+      <p class="dval">一个订单管理小程序：商品分类、下单、云函数写订单库、订单查询。</p>
+      <p class="dsum">用微信云开发做的，25 件商品按业务分类，订单写入云端集合后可在查询页读回。</p>
+      <div class="tags"><span class="tag">微信小程序</span><span class="tag">云开发</span><span class="tag">JavaScript</span></div>
+    </a>
+
+    <a class="deal" href="#">
+      <div class="dname">Kaggle 实验笔记</div>
+      <div class="dplat">2026-11 · 数据科学</div>
+      <p class="dval">在 Kaggle 免费 GPU 和 TPU 上跑实验：测设备、看额度、写小训练。</p>
+      <p class="dsum">拿到 2 张 Tesla T4（各 16GB）和 TPU v5e-8，写过设备检测和 TPU 测试 Notebook。</p>
+      <div class="tags"><span class="tag">Kaggle</span><span class="tag">TensorFlow</span><span class="tag">GPU</span></div>
+    </a>
+
+    <a class="deal" href="#">
+      <div class="dname">X 热榜小工具</div>
+      <div class="dplat">2026-11 · 网页工具</div>
+      <p class="dval">一个看 X 热榜的网页小工具：抓榜单、分析帖子为什么火。</p>
+      <p class="dsum">榜单实时刷新，每条附“为什么火”分析，还能照着爆款结构写草稿。</p>
+      <div class="tags"><span class="tag">Web</span><span class="tag">JavaScript</span></div>
+    </a>
+
+  </div>
+  <p style="color:var(--ink3);font-size:13.5px;margin:14px 2px 0">更多代码：<a href="https://github.com/CZUtwit">GitHub · CZUtwit</a>　<a href="https://www.kaggle.com/cyrus798">Kaggle · Cyrus798</a></p>
+
+  <div id="about" class="count">关于</div>
+  <div class="about">
+    <p>Dawn 是我的笔名。这个博客用来记录学习和思考，慢慢生长。</p>
+    <p>页面样式参考了赛博鸡蛋（saibodan.com）的干净排版：暖纸底色、单色点缀、卡片列表，没有广告。</p>
+  </div>
+
+  <footer>
+    © 2026 Dawn · 用心记录，慢慢生长
+  </footer>
+
+</main>
+</body>
+</html>
